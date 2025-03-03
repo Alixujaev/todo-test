@@ -1,7 +1,10 @@
 import { deletePost, updatePost } from "@/api/posts";
 import { PostType } from "@/lib/types";
+import { setPost } from "@/store/mainSlice";
+import { useDispatch } from "react-redux";
 
 const TodoCard = ({ post }: { post: PostType }) => {
+  const dispatch = useDispatch();
   function handleDelete(id: string) {
     deletePost(id).then((res) => {
       console.log(res);
@@ -27,9 +30,9 @@ const TodoCard = ({ post }: { post: PostType }) => {
         <button type="button" onClick={() => handleDelete(post.id)}>
           Delete
         </button>
-        {/* <button type="button" onClick={() => dispatch(setPost(post))}>
-            Edit
-          </button> */}
+        <button type="button" onClick={() => dispatch(setPost(post))}>
+          Edit
+        </button>
         <button
           onClick={() =>
             handleUpdate(post.id, { ...post, is_completed: !post.is_completed })

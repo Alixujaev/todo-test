@@ -2,7 +2,7 @@ import axios, { AxiosInstance } from "axios";
 
 
 const axiosInstance: AxiosInstance = axios.create({
-  baseURL: "http://localhost:3000/",
+  baseURL: "http://localhost:8080/",
   headers: {
     Accept: 'application/json',
     Authorization: `Bearer ${localStorage.getItem('access_token')}`,

@@ -1,3 +1,14 @@
 {
-  "posts": []
+  "posts": [
+    {
+      "id": "9f4fad44-3572-46b8-b088-b30d022ed040",
+      "title": "adasad",
+      "is_completed": true
+    },
+    {
+      "id": "19697f57-01ca-4374-a80e-e489ce3a41aa",
+      "title": "asdasdas",
+      "is_completed": true
+    }
+  ]
 }
